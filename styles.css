@@ -21,6 +21,7 @@ body {
     margin: 0;
     text-align: center;
     animation: fadeIn 1.5s ease-in-out;
+    overflow: auto;
 }
 
 .container {
