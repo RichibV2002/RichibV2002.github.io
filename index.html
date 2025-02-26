@@ -139,29 +139,34 @@
     <script>
         function mostrarGaleria() {
             document.getElementById("galeria").style.display = "block";
-
+ document.body.style.overflow = "auto"; // Permite el scroll
         // Ocultar los otros dos botones
         document.getElementById("btnCarta").style.display = "none";
         document.getElementById("btnPoesia").style.display = "none";
+             
         }
         function cerrarGaleria() {
             document.getElementById("galeria").style.display = "none";
-
+document.body.style.overflow = "hidden"; 
 // Volver a mostrar los botones ocultos
 document.getElementById("btnCarta").style.display = "inline-block";
 document.getElementById("btnPoesia").style.display = "inline-block";
         }
         function mostrarCarta() {
             document.getElementById("carta").style.display = "block";
+            document.body.style.overflow = "auto"; // Permite el scroll
         }
         function cerrarCarta() {
             document.getElementById("carta").style.display = "none";
+            document.body.style.overflow = "hidden"; // Vuelve a ocultar el scroll si lo necesitas
         }
         function mostrarPoesia() {
             document.getElementById("poesia").style.display = "block";
+            document.body.style.overflow = "auto";
         }
         function cerrarPoesia() {
             document.getElementById("poesia").style.display = "none";
+             document.body.style.overflow = "hidden";
         }
 
         const musica = document.getElementById("musica");
