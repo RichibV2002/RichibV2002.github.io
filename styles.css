@@ -108,20 +108,20 @@ button:hover {
 
 /* Carta emergente */
 .carta, .poesia {
-    display: none;
+display: none;
     position: fixed;
-    top: 50%;
+    top: 10%; /* Empieza desde arriba */
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%); /* Solo centrar horizontalmente */
     background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 90%; /* Se ajusta al ancho del móvil */
-    max-width: 400px; /* Máximo tamaño en pantallas grandes */
-    max-height: 90vh; /* Se ajusta en altura */
-    overflow-y: auto; /* Permite desplazamiento si hay mucho contenido */
+    width: 90%; /* Se adapta a móviles */
+    max-width: 400px; /* Máximo en pantallas grandes */
+    max-height: 80vh; /* No ocupará toda la pantalla */
+    overflow-y: auto; /* Permite desplazamiento */
 
 }
 
@@ -140,9 +140,9 @@ button:hover {
 }
 
 .imagenes-carta img {
-   width: 100%; /* Ajusta el tamaño de las imágenes */
+     width: 100%; /* Que se adapten al tamaño */
+    max-width: 300px; 
     height: auto;
-    max-width: 300px; /* Para que no sean demasiado grandes */
     border-radius: 10px;
 }
 
