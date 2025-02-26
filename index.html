@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mafer 💖</title>
+    <style>
+        body {
+            background-color: #87CEEB;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            overflow: hidden;
+        }
+        h1 {
+            color: white;
+            margin-top: 50px;
+        }
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: white;
+            font-size: 1em;
+            user-select: none;
+            pointer-events: none;
+            animation-name: fall;
+            animation-timing-function: linear;
+        }
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="music-controller">
+        <button id="playPauseBtn">🎵</button>
+    </div>
+    
+    <audio id="musica" autoplay>
+        <source src="musica.mp3" type="audio/mpeg">
+        Tu navegador no soporta el audio.
+    </audio>
+
+
+    <div class="container">
+        <h4 class="subtitulo">Antes de empezar, Dale Click a la Musica jeje 💕</h4>
+        <h2 class="subtitulo"> TE AMOOOOOOOOOOOOOOOOOOOOOO</h2>
+        <h2 class="subtitulo" > MUCHOOOOOOOOOOO</h2>
+        <h1 id="mensaje">Para Mi Chiquita engreida, Mi Mafer bella 💕</h1>
+        <p class="subtitulo">Un pequeño detalle por nuestro tercer mes juntos, Gracias Por todo lo lindo... ✨</p>
+        <button id="btnCarta" onclick="mostrarCarta()">Primero Abre Esto!</button>
+        <button id="btnGaleria" onclick="mostrarGaleria()">Ver nuestra historia 📸</button>
+        <button id="btnPoesia" onclick="mostrarPoesia()">Una Poesia Para Mi bebesuky</button>
+        
+
+<div id="poesia" class="poesia" style="display: none;">
+    <h2>Una Poesia Para Mi bebesuky</h2>
+    <p> Misteriosa y radiante como el amanecer, <br>
+        A tu lado el mundo se vuelve canción. <br>
+        Flores despiertan al verte aparecer,<br>
+        Eres mi estrella, mi luz, mi razón.<br>
+        Ríes y el tiempo se queda en suspenso,<br>
+        siento en mi alma un fuego inmenso.<br>
+        
+        Tus ojos reflejan la paz de los mares,<br>
+        tu voz es el eco de dulces cantares.<br>
+        Tu esencia es brisa que al alma enreda,<br>
+        un susurro tierno que todo me enreda.<br>
+        
+        Mafer, mi guía, mi faro dorado,<br>
+        contigo los días se visten de encanto.<br>
+        Eres la chispa que enciende mis sueños,<br>
+        mi amor más sincero, mi más puro canto.</p>
+    <button onclick="cerrarPoesia()">Cerrar</button>
+</div>
+        
+        <div id="carta" class="carta" style="display: none;">
+            <h2>Para ti, mi bebesuky bella 💖</h2>
+            <p>Mi princesita bella... Bueno Como empezar? Desde Brawl Stars... En serio le agradezco mucho a este juego por darme la oportunidad
+            de haberte conocido... De que seas mi PRIMER AMOR! Bueno Dios fue el que me permitió que nos pudieramos conocer así que se lo agradezco
+            netamente a el, Todo lo que nos ha permitido vivir! Se lo agradecemos a él, Brawl stars en realidad solo un canal para que nosotros nos conociéramos, 
+            pero el lo permitió. Gracias por haber llegado a mi vida y poder darme ese privilegio de ser tu enamorado, gracias por estar conmigo en las buenas y en las malas,
+            se que hemos pasado cosas fuertes y que la canción te recuerda mucho, pero es nuestra canción, la que nos acompaño en esos momentos… La primera imagen que observas 
+            es del primer día en el que nos conocimos, un 4 de noviembre del 2024 pudimos coincidir… de miles y miles de personas… coincidimos!!! La segunda imagen fue de nuestra primera película juntos, 
+            la tercera imagen fue el primer día en el cual nos fuimos a vernos! Fue un 25 de noviembre del 2024, Nos encontrábamos nerviosos pensando que solo seriamos conocidos, que no sucedería nada más… Pero quien iba a pensar que conectaríamos tanto… 
+            A tal punto de ya tener 3 meses juntos y con ganas de seguir amándonos hasta el fin de nuestros días… Quien podría pensar eso, que dos personas extrañas se quisieran tanto en pocas semanas. Que pasáramos muchas cosas en tan solo 3 meses… Te amo maría Fernanda, 
+            se que no te gusta tu nombre por lo COMÚN que es, Pero créeme que yo amo cada pedazo de ti… Cada acción tuya, cada gesto, cada detalle tuyo, cada palabra, cada suspiro tuyo. ¡Te amo incluso cuando peleamos, te amo demasiado! Y realmente quiero una vida contigo,
+            quiero despertarme contigo en las mañanas, ir de compras, ir de viaje, ¡superarnos y salir adelante juntos! Progresar juntos, mejorar juntos como pareja. Realmente lo quiero todo contigo, créeme, mi amor… Te amo con todo mi alma, gracias por brindarme toda la 
+            oportunidad de seguir junto a ti. créeme que me tendrás siempre, En las buenas y en las malas mi bebesuky hermosa jajaja, te amo y ya quiero que nos veamos… ¡Te adoro preciosa, Feliz tercer mes! 💕</p>
+            <div class="imagenes-carta">
+                <img src="carta1.jpg" alt="Imagen 1">
+                <img src="carta2.jpg" alt="Imagen 2">
+                <img src="carta3.jpg" alt="Imagen 3">
+                <img src="carta4.jpg" alt="Imagen 4">
+            </div>
+            
+            <button onclick="cerrarCarta()">Cerrar</button>
+        </div> <br> 
+
+        <div id="galeria" class="galeria" style="display: none;">
+            <div class="carousel-container">
+                <button class="prev" onclick="cambiarSlide(-1)">&#10094;</button>
+                <div class="carousel" id="carousel">
+                    <img class="slide" src="1.jpg" alt="Foto 1">
+                    <img class="slide" src="2.jpg" alt="Foto 2">
+                    <img class="slide" src="3.jpg" alt="Foto 3">
+                    <img class="slide" src="4.jpg" alt="Foto 4">
+                    <img class="slide" src="5.jpg" alt="Foto 5">
+                    <img class="slide" src="6.jpg" alt="Foto 6">
+                    <img class="slide" src="7.jpg" alt="Foto 7">
+                    <img class="slide" src="8.jpg" alt="Foto 8">
+                    <img class="slide" src="9.jpg" alt="Foto 9">
+                    <img class="slide" src="10.jpg" alt="Foto 10">
+                    <img class="slide" src="11.jpg" alt="Foto 11">
+                    <img class="slide" src="12.jpg" alt="Foto 12">
+                    <img class="slide" src="13.jpg" alt="Foto 13">
+                    <img class="slide" src="14.jpg" alt="Foto 14">
+                    <img class="slide" src="15.jpg" alt="Foto 15">
+                    <img class="slide" src="16.jpg" alt="Foto 16">
+                    <img class="slide" src="17.jpg" alt="Foto 17">
+                    <img class="slide" src="18.jpg" alt="Foto 18">
+                    <img class="slide" src="19.jpg" alt="Foto 19">
+                    <img class="slide" src="20.jpg" alt="Foto 20">
+                </div>
+                <button class="next" onclick="cambiarSlide(1)">&#10095;</button>
+            </div>
+            <p>Te voy a amar por siempre... Cariño mío...</p>
+            <p>Lo que siento por ti... no se podrá explicar con tan solo simples palabras... se necesita más...</p>
+            <p>Te amo con todo mi ser... MI ESPOSITA BELLAAAA</p>
+            <br>
+            <button onclick="cerrarGaleria()">Cerrar</button>
+        </div>
+        
+    </div>
+
+    <script>
+        function mostrarGaleria() {
+            document.getElementById("galeria").style.display = "block";
+
+        // Ocultar los otros dos botones
+        document.getElementById("btnCarta").style.display = "none";
+        document.getElementById("btnPoesia").style.display = "none";
+        }
+        function cerrarGaleria() {
+            document.getElementById("galeria").style.display = "none";
+
+// Volver a mostrar los botones ocultos
+document.getElementById("btnCarta").style.display = "inline-block";
+document.getElementById("btnPoesia").style.display = "inline-block";
+        }
+        function mostrarCarta() {
+            document.getElementById("carta").style.display = "block";
+        }
+        function cerrarCarta() {
+            document.getElementById("carta").style.display = "none";
+        }
+        function mostrarPoesia() {
+            document.getElementById("poesia").style.display = "block";
+        }
+        function cerrarPoesia() {
+            document.getElementById("poesia").style.display = "none";
+        }
+
+        const musica = document.getElementById("musica");
+        const playPauseBtn = document.getElementById("playPauseBtn");
+
+        function toggleMusic() {
+            if (musica.paused) {
+                musica.play();
+                playPauseBtn.textContent = "🔊";
+            } else {
+                musica.pause();
+                playPauseBtn.textContent = "🔇";
+            }
+        }
+    </script> <script>
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.innerHTML = '❄';
+            document.body.appendChild(snowflake);
+            
+            const startPosX = Math.random() * window.innerWidth;
+            const duration = Math.random() * 3 + 2;
+            const size = Math.random() * 20 + 10;
+            
+            snowflake.style.left = `${startPosX}px`;
+            snowflake.style.fontSize = `${size}px`;
+            snowflake.style.animationDuration = `${duration}s`;
+            
+            setTimeout(() => {
+                snowflake.remove();
+            }, duration * 1000);
+        }
+        
+        setInterval(createSnowflake, 200);
+    </script>
+
+<script>
+    let indexActual = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function mostrarSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = i === index ? "block" : "none";
+        });
+    }
+
+    function cambiarSlide(direccion) {
+        indexActual += direccion;
+        
+        if (indexActual >= slides.length) indexActual = 0;
+        if (indexActual < 0) indexActual = slides.length - 1;
+
+        mostrarSlide(indexActual);
+    }
+
+    // Mostrar la primera imagen al cargar la página
+    mostrarSlide(indexActual);
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let audio = document.getElementById("musica");
+        let btn = document.getElementById("playPauseBtn");
+
+        // Desmutear audio si está bloqueado por el navegador
+        audio.muted = false;
+
+        // Controlar la música con el botón
+        btn.addEventListener("click", function () {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
