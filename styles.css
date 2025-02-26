@@ -118,9 +118,11 @@ button:hover {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 80%;
-    max-width: 700px;
-    animation: fadeIn 0.5s ease-in-out;
+    width: 90%; /* Se ajusta al ancho del móvil */
+    max-width: 400px; /* Máximo tamaño en pantallas grandes */
+    max-height: 90vh; /* Se ajusta en altura */
+    overflow-y: auto; /* Permite desplazamiento si hay mucho contenido */
+
 }
 
 .carta h2, .poesia h2 {
@@ -138,11 +140,10 @@ button:hover {
 }
 
 .imagenes-carta img {
-    width: 240px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   width: 100%; /* Ajusta el tamaño de las imágenes */
+    height: auto;
+    max-width: 300px; /* Para que no sean demasiado grandes */
+    border-radius: 10px;
 }
 
 /* Ajuste para móviles */
